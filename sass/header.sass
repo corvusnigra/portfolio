@@ -1,0 +1,61 @@
+@import "bourbon"
+@import "vars.sass"
+@import "app/libs/susy/sass/susy"
+@import "app/libs/breakpoint-sass/stylesheets/breakpoint"
+@import "app/libs/fullpage.js/dist/jquery.fullpage.min"
+@import "susy"
+
+
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	font-family: "RobotoRegular", sans-serif
+	overflow-x: hidden
+
+.hidden
+	display: none
+
+//$main_layout: layout(12 .5 fluid float inside)
+.testing3
+	+container(1170px) 
+	&>div
+		text-align: center
+		+span(4 of 12)
+		+breakpoint(max-width 900px)
+		 +span(12)
+		 +gutter(1)
+#fullpage
+	text-align: center
+
+#myMenu
+	position: fixed
+	list-style-type: none
+	margin: 0
+	padding: 0
+	z-index: 100
+	li
+		display: inline-block
+		a
+			padding: 10px 20px
+			display: inline-block
+			background: rgba(0,0,0, .4)
+			border-radius: 3px
+			text-decoration: none
+			color: #000
+li.active
+	a
+		background: #000
+		color: #fff
+// .testing3
+// 	@include container(80%)
+// 	&>div
+// 		text-align: center
+// 		@include span(4 of $main_layout)
+// 		@include breakpoint(max-width 900px)
+// 			@include span(6 of $main_layout)
+// 			&:nth-child(3)
+// 				@include full
+
