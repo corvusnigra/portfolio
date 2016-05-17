@@ -11,50 +11,135 @@ body
 	min-width: 320px
 	position: relative
 	line-height: 1.6
-	font-family: "RobotoRegular", sans-serif
+	font-family: "HomizioNova", sans-serif
 	overflow-x: hidden
 
-.hidden
+.hidden	
 	display: none
 
-//$main_layout: layout(12 .5 fluid float inside)
-.testing3
-	+container(1170px) 
-	&>div
-		text-align: center
-		+span(4 of 12)
-		+breakpoint(max-width 900px)
-		 +span(12)
-		 +gutter(1)
-#fullpage
-	text-align: center
+header
+	min-height: 1000px
+	background: url(/img/bg_header.jpg)
+	background-position: top center
+	background-size: cover
+.header-content
+	+container(1200px)
+	position: relative
 
-#myMenu
-	position: fixed
-	list-style-type: none
-	margin: 0
-	padding: 0
-	z-index: 100
-	li
-		display: inline-block
-		a
-			padding: 10px 20px
-			display: inline-block
-			background: rgba(0,0,0, .4)
-			border-radius: 3px
-			text-decoration: none
-			color: #000
-li.active
-	a
-		background: #000
+.header-element
+	width: 160px
+	height: 160px
+	border: 3px solid #fff
+	float: left
+	display: table-cell
+	position: relative
+
+
+	&_long-two
+		width: 240px
+		border: none
+	&_long-one
+		width: 200px
+		border: none
+	&_logo
+		width: 360px
+		border: none
+	&_bd-top
+		border-top: 3px solid #fff
+	&_bd-btm
+		border-bottom: 3px solid #fff
+	&_margin
+		margin: 0 4px
+	&_first
+		margin-left: 37px
+	&_last
+		width: 315px
+		border: none
+	&_line-btm
+		&::before
+			content: ''
+			height: 3px
+			width: 60%
+			background: #fff
+			position: absolute
+			bottom: -3px
+			right: -62%
+
+	&_line-right
+		&::before
+			content: ''
+			height: 120%
+			width: 3px
+			background: #fff
+			position: absolute
+			bottom: 0
+			right: 0
+	&_about-us
+		margin: 4px 158px 0 201px
+
+	&_margin-btm
+		margin-bottom: 4px
+	&_fl-right
+		float: right
+
+	&_line-left
+		&::before
+			content: ''
+			background: #fff
+			position: absolute
+			height: 3px
+			width: 90%
+			right: 100%
+			bottom: -3px
+
+	&_btm-vertical
+		&::before
+			content: ''
+			height: 120%
+			width: 3px
+			background: #fff
+			position: absolute
+			height: 200%
+			bottom: -189%
+			left: -3px
+
+.header-top-line
+	width: 680px
+	transform-origin: 100%
+	transform: rotate(-45deg)
+	position: absolute
+	top: -120px
+
+.our-works
+	background: url(/img/icon_monitor.png) no-repeat
+	background-position: center 30%
+	background-size: 50px
+	transform: rotate(45deg)
+	width: 100%
+	height: 100%
+	cursor: pointer
+	span
 		color: #fff
-// .testing3
-// 	@include container(80%)
-// 	&>div
-// 		text-align: center
-// 		@include span(4 of $main_layout)
-// 		@include breakpoint(max-width 900px)
-// 			@include span(6 of $main_layout)
-// 			&:nth-child(3)
-// 				@include full
+		font-size: 20px
+		width: 110px
+		position: absolute
+		bottom: 20%
+		left: 50%
+		transform: translate(-50%)
 
+.what-we-do
+	background: url(/img/icon_book.png) no-repeat
+	background-position: center 30%
+	background-size: 50px
+	transform: rotate(45deg)
+	width: 100%
+	height: 100%
+	cursor: pointer
+	span
+		color: #fff
+		font-size: 20px
+		width: 110px
+		position: absolute
+		bottom: 20%
+		left: 50%
+		transform: translate(-50%)
