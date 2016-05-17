@@ -37,8 +37,7 @@ gulp.task('scripts', function() {
 		'./app/libs/plugins-scroll/plugins-scroll.js',
 		'./app/libs/gsap/src/uncompressed/TweenMax.js',
 		'./app/libs/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js',
-		'./app/libs/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js',
-		'./app/libs/fullpage.js/dist/jquery.fullpage.js'
+		'./app/libs/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'
 		])
 		.pipe(concat('libs.js'))
 		// .pipe(uglify()) //Minify libs.js
