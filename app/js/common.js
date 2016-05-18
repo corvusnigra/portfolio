@@ -1,5 +1,9 @@
 $(function() {
-
+	$(".toggle-mnu").click(function() {
+		$(this).toggleClass("on");
+		$(".main-mnu").slideToggle();
+		return false;
+	});
 	//SVG Fallback
 	if(!Modernizr.svg) {
 		$("img[src*='svg']").attr("src", function() {

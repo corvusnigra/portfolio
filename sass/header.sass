@@ -22,17 +22,19 @@ header
 	background: url(/img/bg_header.jpg)
 	background-position: top center
 	background-size: cover
+	position: relative
 .header-content
 	+container(1200px)
 	position: relative
-
+	min-height: 1000px
 .header-element
 	width: 160px
 	height: 160px
-	border: 3px solid #fff
+	border: 2px solid #fff
 	float: left
 	display: table-cell
 	position: relative
+
 
 
 	&_long-two
@@ -45,9 +47,9 @@ header
 		width: 360px
 		border: none
 	&_bd-top
-		border-top: 3px solid #fff
+		border-top: 2px solid #fff
 	&_bd-btm
-		border-bottom: 3px solid #fff
+		border-bottom: 2px solid #fff
 	&_margin
 		margin: 0 4px
 	&_first
@@ -58,18 +60,18 @@ header
 	&_line-btm
 		&::before
 			content: ''
-			height: 3px
+			height: 2px
 			width: 60%
 			background: #fff
 			position: absolute
-			bottom: -3px
+			bottom: -2px
 			right: -62%
 
 	&_line-right
 		&::before
 			content: ''
 			height: 120%
-			width: 3px
+			width: 2px
 			background: #fff
 			position: absolute
 			bottom: 0
@@ -87,21 +89,21 @@ header
 			content: ''
 			background: #fff
 			position: absolute
-			height: 3px
+			height: 2px
 			width: 90%
 			right: 100%
-			bottom: -3px
+			bottom: -2px
 
 	&_btm-vertical
-		&::before
+		&::after
 			content: ''
 			height: 120%
-			width: 3px
+			width: 2px
 			background: #fff
 			position: absolute
 			height: 200%
 			bottom: -189%
-			left: -3px
+			left: -2px
 
 .header-top-line
 	width: 680px
@@ -143,3 +145,199 @@ header
 		bottom: 20%
 		left: 50%
 		transform: translate(-50%)
+
+.our-team
+	background: url(/img/icon_team.png) no-repeat
+	background-position: center 30%
+	background-size: 50px
+	transform: rotate(45deg)
+	width: 100%
+	height: 100%
+	cursor: pointer
+	span
+		color: #fff
+		font-size: 20px
+		width: 110px
+		position: absolute
+		bottom: 26%
+		left: 50%
+		transform: translate(-40%)
+.about-us
+	background: url(/img/icon_heart.png) no-repeat
+	background-position: center 30%
+	background-size: 50px
+	transform: rotate(45deg)
+	width: 100%
+	height: 100%
+	cursor: pointer
+	span
+		color: #fff
+		font-size: 20px
+		width: 110px
+		position: absolute
+		bottom: 26%
+		left: 50%
+		transform: translate(-40%)
+
+.in-touch
+	background: url(/img/icon_envelop.png) no-repeat
+	background-position: center 30%
+	background-size: 50px
+	transform: rotate(45deg)
+	width: 100%
+	height: 100%
+	cursor: pointer
+	span
+		color: #fff
+		font-size: 20px
+		width: 110px
+		position: absolute
+		bottom: 26%
+		left: 50%
+		transform: translate(-50%)
+
+.logo
+	width: 320px
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+
+.bg_elem
+	&::before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		background: #333333
+		opacity: .5
+		z-index: 1
+	img
+		width: 100%
+		transform: rotate(45deg) scale(2.5)
+
+.wrap_img
+	overflow: hidden
+	width: 100%
+	height: 100%
+
+.header-bottom-line
+	width: 230px
+	width: 230px;
+	position: absolute
+	right: 274px
+	transform-origin: 100%
+	top: 80px
+	transform: rotate(-45deg)
+	padding-bottom: 40px
+	border-bottom: 2px solid #fff
+	+clearfix
+
+.bottom-element
+	border: 2px solid #fff
+	width: 50px
+	height: 50px
+	position: relative
+	float: left
+	transition: .3s
+	&:hover
+		background: #fff
+		a
+			color: #E83A93
+	& a
+		color: #fff
+		font-size: 25px
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%) rotate(45deg)
+		width: 100%
+		height: 100%
+		text-align: center
+
+.el_1
+	margin: 0 100px 0 40px
+
+.el_2
+	margin: 20px
+
+.el_3
+	margin: 0 50px 0 0
+
+.el_4
+	margin: 50px 0 0 -50px
+
+.el_5
+	margin: 0 3px 0 38px
+
+.arrow
+	margin: 0 auto
+	width: 40px
+	position: absolute
+	bottom: 3%
+	left: 50%
+	margin-left: -20px
+	cursor: pointer
+
+.arrow__top
+	width: 20px
+	height: 20px
+	border: 2px solid #fff
+	transform: rotate(45deg)
+
+.arrow__btm
+	width: 30px
+	height: 30px
+	background: #fff
+	transform: rotate(45deg) translate(-9px,-1px)
+	text-align: center
+	& .fa
+		transform: rotate(-45deg)
+
+.mobile-menu
+	width: 60px
+	height: 60px
+	background: #e83a93
+	transform: rotate(-45deg)
+	position: absolute
+	bottom: -29px
+	right: 20%
+
+.toggle-mnu 
+  display: block
+  width: 28px
+  height: 28px
+  margin-top: 14px
+  transform: rotate(45deg) translate(43%,-21%)
+
+  span:after, span:before 
+    content: ""
+    position: absolute
+    left: 0
+    top: 9px
+
+  span:after
+    top: 18px
+
+  span 
+    position: relative
+    display: block
+
+  span, span:after, span:before
+    width: 100%
+    height: 2px
+    background-color: #fff
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+
+
+  &.on span 
+    background-color: transparent
+
+  &.on span:before 
+    transform: rotate(45deg) translate(-1px, 0px)
+
+  &.on span:after 
+    transform: rotate(-45deg) translate(6px, -7px)
