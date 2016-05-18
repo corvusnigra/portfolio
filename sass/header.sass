@@ -13,6 +13,7 @@ body
 	line-height: 1.6
 	font-family: "HomizioNova", sans-serif
 	overflow-x: hidden
+	color: #777
 
 .hidden	
 	display: none
@@ -346,3 +347,59 @@ header
 
   &.on span:after 
     transform: rotate(-45deg) translate(6px, -7px)
+
+.work__wrap
+	+container(1200px)
+
+.work__h1
+	text-align: center
+	& span
+		color: #e83a93
+
+section
+	padding: 100px 0 150px 0
+
+.work__p
+	text-align: center
+	margin: 50px 0 100px 0
+
+.work__item
+	+span(3)
+	+breakpoint(max-width 1100px)
+		+span(6)
+		.work-elem
+			margin-bottom: 130px
+
+	+breakpoint(max-width 580px)
+		+span(12)
+		// .work-elem
+		// 	margin-bottom: 130px
+
+	
+
+.work-elem
+	width: 190px
+	height: 190px
+	border: 2px solid #e83a93
+	transform: rotate(45deg)
+	color: #e83a93
+	cursor: pointer
+	margin: 0 auto
+	transition: .3s
+	&:hover
+		background: #e83a93
+		.work-elem__number,.work-elem__text
+			color: #fff
+
+
+	&__number
+		font-size: 60px
+		transform: rotate(-45deg) translate(-18%,0%)
+		width: 100%
+		text-align: center
+	&__text
+		font-size: 20px
+		transform: rotate(-45deg) translate(7%,0%)
+		width: 100%
+		text-align: center
+

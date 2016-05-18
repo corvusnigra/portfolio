@@ -4,6 +4,18 @@ $(function() {
 		$(".main-mnu").slideToggle();
 		return false;
 	});
+
+	$(".arrow").click(function(){
+		$("html,body").animate({
+			scrollTop : $(".work").offset().top
+		}, 1000);
+	});
+
+	$(".what-we-do").click(function(){
+		$("html,body").animate({
+			scrollTop : $(".work").offset().top
+		}, 1000);
+	});
 	//SVG Fallback
 	if(!Modernizr.svg) {
 		$("img[src*='svg']").attr("src", function() {
