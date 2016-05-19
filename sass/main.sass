@@ -233,7 +233,65 @@ body textarea:required:valid
 .owl-next
 	top: 40%
 	right: 6%
+h2
+	font-size: 30px
 
+.services__h2
+	text-align: center
+	span
+		color: $accent
+
+.services__p
+	text-align: center
+	span
+		color: $accent
+
+.services__wrap
+	+container(1200px)
+
+.service-item
+	+span(4)
+	padding-left: 145px
+	position: relative
+	margin: 5% 0
+	cursor: pointer
+	+breakpoint(max-width 970px)
+		+span(6)
+		padding-left: 200px
+		.service-item__icon
+			left: 8%
+
+	+breakpoint(max-width 730px)
+		+span(12)
+		padding-left: 200px
+		.service-item__icon
+			left: 12%
+	&:hover
+		.service-item__icon
+			border-color: $accent
+
+.service-item__icon
+	width: 90px
+	height: 90px
+	border: 3px solid #eee
+	transform: rotate(45deg)
+	position: absolute
+	left: 15px
+	transition: .3s
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+	align-items: center
+	img
+		transform: rotate(-45deg)
+
+
+.service-item__header
+	font-size: 20px
+	line-height: 2
 
 
 //ALWAYS END
