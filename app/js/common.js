@@ -5,9 +5,23 @@ $(function() {
 		return false;
 	});
 
+	$('.owl-carousel').owlCarousel({
+		items:1,
+		nav: true,
+		dots: true,
+		loop: true,
+		navText: ['<i class="fa fa-chevron-left" ></i>','<i class="fa fa-chevron-right" ></i>']
+	})
+
 	$(".arrow").click(function(){
 		$("html,body").animate({
 			scrollTop : $(".work").offset().top
+		}, 1000);
+	});
+
+	$(".about-us").click(function(){
+		$("html,body").animate({
+			scrollTop : $(".about").offset().top
 		}, 1000);
 	});
 

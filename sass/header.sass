@@ -372,8 +372,6 @@ section
 
 	+breakpoint(max-width 580px)
 		+span(12)
-		// .work-elem
-		// 	margin-bottom: 130px
 
 	
 
@@ -402,4 +400,68 @@ section
 		transform: rotate(-45deg) translate(7%,0%)
 		width: 100%
 		text-align: center
+
+.about__h1
+	text-align: center
+	span
+		color: #e83a93
+
+.s-grey
+	background: #eeeeee
+
+.about__wrap
+	+container(1200px)
+	+breakpoint(max-width 640px)
+		.b-text
+			text-align: center
+		.b-text__p-btm,.b-text__p-top
+			padding-right: 0
+
+.about__p
+	text-align: center
+	margin: 50px 0 100px 0
+
+.b-text,.b-slider
+	+span(6)
+	+breakpoint(max-width 640px)
+		+span(12)
+		.button
+			margin: 30px 0
+
+
+
+.b-text__p-btm,.b-text__p-top
+	padding: 20px 40px 30px 0
+
+.b-text__p-top
+	padding-top: 0
+	margin-top: 0
+
+.b-text__p-btm
+	padding-bottom: 70px
+
+.button
+	display: inline-block
+	padding: 16px 50px
+	background: #e83a93
+	color: #fff
+	font-size: 18px
+	letter-spacing: 1px
+	transition: .3s
+	text-decoration: none !important
+	
+	&:visited
+		text-decoration: none
+		color: #fff
+	&:hover
+		text-decoration: none
+		background: darken(#e83a93, 10%)
+		box-shadow: 0 2px 8px 1px rgba(0,0,0,.3)
+	&:focus
+		outline:none !important
+	&:active
+		text-decoration: none !important
+		color: #fff
+	
+
 
