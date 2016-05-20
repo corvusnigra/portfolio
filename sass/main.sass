@@ -293,6 +293,58 @@ h2
 	font-size: 20px
 	line-height: 2
 
+.feature
+	background: url(/img/bg_section_1.jpg)
+	background-size: cover
+	background-position: top center
+	position: relative
+	min-height: 600px
+	padding: 10% 0px 5% 0
+	&::before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		background: #333333
+		opacity: .8
+
+.feature__wrap
+	+container(1200px)
+	+breakpoint(max-width 800px)
+		.feature-b-left
+			display: none
+		.feature-b-right
+			+span(12)
+
+.feature-b-left,.feature-b-right
+	+span(6)
+
+.feature-b-left
+	img
+		width: 100%
+		position: relative
+		z-index: 100
+
+.service-item__feature
+	width: 100%
+	color: #fff
+	padding-bottom: 6%
+	&:hover
+		.service-item__icon
+			border-color: #fff
+	
+
+.feature-b-right
+	.button
+		position: relative
+		z-index: 100
+.wrap-btn
+	padding: 40px 0
+	text-align: center
+	clear: both
+
 
 //ALWAYS END
 @import "media"
