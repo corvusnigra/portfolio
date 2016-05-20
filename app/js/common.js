@@ -1,17 +1,57 @@
 $(function() {
+  
+ 
+	$(document).ready(function(){
+		
+		$("#feature-crousel").owlCarousel({
+			nav:true,
+			dots:false,
+			items:4,
+			loop:true,
+			navText:['<i class="fa fa-chevron-left" ></i>','<i class="fa fa-chevron-right" ></i>'],
+			responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+
+         300:{
+            items:2,
+            nav:true
+        },
+
+        700:{
+            items:2,
+            nav:true
+        },
+
+        1000:{
+            items:4,
+            nav:true
+        },
+        
+    }
+
+		});
+
+		$(".owl-carousel").owlCarousel({
+			items:1,
+			nav:true,
+			dots:true,
+			loop:true,
+			navText: ['<i class="fa fa-chevron-left" ></i>','<i class="fa fa-chevron-right" ></i>']
+		});
+
+	});
+	
+
+
 	$(".toggle-mnu").click(function() {
 		$(this).toggleClass("on");
 		$(".main-mnu").slideToggle();
 		return false;
 	});
 
-	$('.owl-carousel').owlCarousel({
-		items:1,
-		nav: true,
-		dots: true,
-		loop: true,
-		navText: ['<i class="fa fa-chevron-left" ></i>','<i class="fa fa-chevron-right" ></i>']
-	})
 
 	$(".arrow").click(function(){
 		$("html,body").animate({
@@ -28,6 +68,12 @@ $(function() {
 	$(".what-we-do").click(function(){
 		$("html,body").animate({
 			scrollTop : $(".work").offset().top
+		}, 1000);
+	});
+
+	$(".our-team").click(function(){
+		$("html,body").animate({
+			scrollTop : $(".team").offset().top
 		}, 1000);
 	});
 	//SVG Fallback
