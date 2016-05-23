@@ -76,6 +76,11 @@ $(function() {
 			scrollTop : $(".team").offset().top
 		}, 1000);
 	});
+
+	$('.service-item__p').equalHeights();
+	$('.posts-item__p').equalHeights();
+	
+
 	//SVG Fallback
 	if(!Modernizr.svg) {
 		$("img[src*='svg']").attr("src", function() {
