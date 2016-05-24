@@ -7,6 +7,7 @@
 @import "app/libs/susy/sass/susy"
 @import "app/libs/breakpoint-sass/stylesheets/breakpoint"
 @import "susy"
+@import "app/libs/roundslider/dist/roundslider.min"
 
 *::-webkit-input-placeholder
 	color: #666
@@ -526,7 +527,67 @@ $posts_layout: layout(12 .3 fluid float split);
 	padding: 8% 0 0 0
 	clear: both
 	text-align: center
-		
+
+.posts-item__descr
+	+clearfix
+
++breakpoint(max-width 790px)
+	.posts-item__descr
+		margin-top: 30%
+
++breakpoint(max-width 612px)
+	.posts-item__descr
+			margin-top: 0 !important
+
+.skills__wrap
+	+container(1200px)
+
+.skills__h2
+	text-align: center
+	span
+		color: $accent
+
+.skills-item
+	+span(2 of 10)
+	padding-top: 8%
++breakpoint(max-width 980px)
+	.skills-item
+		+span(6)
++breakpoint(max-width 410px)
+	.skills-item
+		+span(12)
+
+.rs-control
+  .rs-range-color
+    background-color: #e83a93
+  .rs-path-color
+    background-color: #eeeeee
+  .rs-handle
+    background-color: rgba(0, 0, 0, 0)
+  .rs-bg-color
+    background-color: #ffffff
+
+.rs-border, .rs-seperator
+	border-color: transparent
+
+.rs-tooltip-text
+	color: #aaa
+	font-size: 36px
+	&::after
+		content: "%"
+
+.round-slider
+	margin: 0 auto
+
+.skills-item__descr
+	text-align: center
+	color: #aaa
+	padding-top: 5%
+
+.team-item
+	// opacity: 0
+
+	
 
 		
 

@@ -77,8 +77,12 @@ $(function() {
 		}, 1000);
 	});
 
-	$('.service-item__p').equalHeights();
-	$('.posts-item__p').equalHeights();
+	$(document).ready(function(){
+		$('.service-item__p').equalHeights();
+		$('.posts-item__p').equalHeights();
+	});
+
+	
 	
 
 	//SVG Fallback
@@ -107,15 +111,50 @@ $(function() {
 	});
 
 	//Chrome Smooth Scroll
-	try {
-		$.browserSelector();
-		if($("html").hasClass("chrome")) {
-			$.smoothScroll();
-		}
-	} catch(err) {
+	// try {
+	// 	$.browserSelector();
+	// 	if($("html").hasClass("chrome")) {
+	// 		$.smoothScroll();
+	// 	}
+	// } catch(err) {
 
-	};
+	// };
 
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
+
+	$("#slider_1,#slider_2,#slider_3,#slider_4,#slider_5").roundSlider({
+		sliderType: "min-range",
+		handleShape: "round",
+		radius: 90,
+		editableTooltip: false,
+		readOnly: true,
+		value: 0,
+		startAngle: 90,
+		width: 8,
+		handleSize: "+3"
+	});
+
+ 
+	var controller = new ScrollMagic.Controller();
+
+	var scene = new ScrollMagic.Scene({ triggerElement: ".skills", offset: "50%" })
+    .on('start', function () {
+        $("#slider_1").roundSlider("setValue", 85, 1);
+        $("#slider_2").roundSlider("setValue", 65, 1);
+        $("#slider_3").roundSlider("setValue", 80, 1);
+        $("#slider_4").roundSlider("setValue", 85, 1);
+        $("#slider_5").roundSlider("setValue", 70, 1);
+    })
+    .addTo(controller);
+
+    $(".team-item,.work__item,.service-item").each( function(index){
+    	$(this).css('animation-delay', index/10 +'s');
+    });
+
+  
+    $(".team-item").animated("fadeInUp");
+    $(".work__item").animated("zoomIn");
+    $(".service-item").animated("fadeInLeft");
+
 
 });
