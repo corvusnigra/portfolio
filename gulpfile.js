@@ -40,7 +40,8 @@ gulp.task('scripts', function() {
 		'./app/libs/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js',
 		'./app/libs/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js',
 		'./app/libs/jQuery.equalHeights/jquery.equalheights.min.js',
-		'./app/libs/roundslider/dist/roundslider.min.js'
+		'./app/libs/roundslider/dist/roundslider.min.js',
+		'./app/libs/magnific-popup/dist/jquery.magnific-popup.min.js'
 		])
 		.pipe(concat('libs.js'))
 		// .pipe(uglify()) //Minify libs.js

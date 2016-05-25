@@ -77,7 +77,13 @@ $(function() {
 		}, 1000);
 	});
 
-	$(document).ready(function(){
+	$(".our-works").click(function(){
+		$("html,body").animate({
+			scrollTop : $(".project").offset().top
+		}, 1000);
+	});
+
+	$(window).load(function(){
 		$('.service-item__p').equalHeights();
 		$('.posts-item__p').equalHeights();
 	});
@@ -110,15 +116,6 @@ $(function() {
 		return false;
 	});
 
-	//Chrome Smooth Scroll
-	// try {
-	// 	$.browserSelector();
-	// 	if($("html").hasClass("chrome")) {
-	// 		$.smoothScroll();
-	// 	}
-	// } catch(err) {
-
-	// };
 
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
@@ -130,7 +127,7 @@ $(function() {
 		readOnly: true,
 		value: 0,
 		startAngle: 90,
-		width: 8,
+		width: 7,
 		handleSize: "+3"
 	});
 
@@ -155,6 +152,8 @@ $(function() {
     $(".team-item").animated("fadeInUp");
     $(".work__item").animated("zoomIn");
     $(".service-item").animated("fadeInLeft");
+
+    $('.popup-link').magnificPopup({type:'image'});
 
 
 });

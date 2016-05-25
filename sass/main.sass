@@ -8,6 +8,8 @@
 @import "app/libs/breakpoint-sass/stylesheets/breakpoint"
 @import "susy"
 @import "app/libs/roundslider/dist/roundslider.min"
+@import "app/libs/magnific-popup/dist/magnific-popup"
+
 
 *::-webkit-input-placeholder
 	color: #666
@@ -584,8 +586,178 @@ $posts_layout: layout(12 .3 fluid float split);
 	color: #aaa
 	padding-top: 5%
 
-.team-item
-	// opacity: 0
+.project
+	+clearfix
+
+.project__h2
+	text-align: center
+	margin-bottom: 7%
+	span
+		color: $accent
+
+.project-item
+	+span(2 of 14 0)
+	position: relative
+	a
+		outline: none
+		display: block
+		transition: .3s
+		&:hover
+			background: rgba(51, 51, 51, .4)
+.project-item__img
+	width: 100%
+	height: 100%
+	min-height: 200px
+	background-size: cover !important
+	background-position: top center
+	position: relative
+	z-index: -1
+
++breakpoint(max-width 1300px)
+	.project-item
+		+span(4 of 12 0)
+
++breakpoint(max-width 730px)
+	.project-item
+		+span(6 of 12 0)
+
++breakpoint(max-width 450px)
+	.project-item
+		+span(12 of 12 0)
+
+
+
+$offers_layout: layout(12 .3 fluid float split);
+
+
+
+
+
+.offers-item
+	+span(4 of $offers_layout)
+	background: #fff
+	margin-top: 7%
+	text-align: center
+	&:hover
+		.offers-item__header
+			color: $accent
+		.offers-item__price
+			color: $accent
+		.button
+			background: $accent
+	.button
+		position: relative
+		top: 28px
+		background: #555
+
+.offers__wrap
+	+container(1200px)
+
+.offers__h2
+	text-align: center
+	span
+		color: $accent
+
+.offers-item__table
+	padding: 0 35px 20px 35px
+	table
+		width: 100%
+		tr
+			border-bottom: 1px solid #b0b0b0
+			&:last-child
+				border: none
+			td
+				padding: 10px 0
+
+.offers-item__header
+	padding: 30px 0 10px 0
+	font-size: 25px
+	transition: .3s
+
+.offers-item__price
+	padding: 20px 0
+	font-size: 45px
+
++breakpoint(max-width 800px)
+	.offers-item
+		+span(6 of $offers_layout)
+
++breakpoint(max-width 600px)
+	.offers-item
+		+span(12 of $offers_layout)
+
+.subscribe
+	background: url(/img/bg_subscribe.jpg)
+	background-size: cover
+	background-position: center 
+	min-height: 700px
+	position: relative
+	// filter: blur(10px)
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: #333
+		opacity: .4
+
+.subscribe__h2
+	position: relative
+	z-index: 100
+	text-align: center
+	color: #fff
+	span
+		color: $accent
+
+.subscribe__p
+	text-align: center
+	color: #fff
+	position: relative
+	z-index: 100
+	span
+		color: $accent
+
+.subscribe__form
+	position: relative
+	z-index: 100
+	margin: 0 auto
+	text-align: center
+	.button
+		cursor: pointer
+
+.subscribe_inp
+	width: 50%
+	height: 80px
+	margin: 6% 0px
+	text-align: center
+	position: relative
+	background: rgba(255,255,255, .2)
+	border: none
+	color: #fff
+	+breakpoint(max-width 1000px)
+		margin: 10% 0px
+		width: 60%
+
+	+breakpoint(max-width 500px)
+		width: 80%
+
+	&:focus
+		outline: none !important
+		+placeholder
+			text-indent: 1000px
+			transition: text-indent 0.3s ease
+	+placeholder
+		color: #fff
+
+
+	
+
+
+
+
+
 
 	
 
