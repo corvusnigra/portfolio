@@ -447,8 +447,7 @@ h2
 	text-align: center
 	font-size: 20px
 	color: $accent
-// .team
-// 	overflow: visible
+
 
 .posts__wrap
 	+container(1200px)
@@ -784,6 +783,7 @@ $offers_layout: layout(12 .3 fluid float split);
 		+breakpoint(max-width 700px)
 			&:last-child
 				margin-bottom: 60px
+
 		input
 			width: 100%
 .touch-msg
@@ -823,6 +823,9 @@ $offers_layout: layout(12 .3 fluid float split);
 
 		&:not(:last-child)
 			margin-bottom: 60px
+			@-moz-document url-prefix()
+				margin-bottom: 68px
+				
 	input
 		background: #eee
 		border: none
