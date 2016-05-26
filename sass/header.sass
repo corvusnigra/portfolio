@@ -4,12 +4,10 @@
 @import "app/libs/breakpoint-sass/stylesheets/breakpoint"
 @import "susy"
 
-
-
 body
 	font-size: 20px
 	letter-spacing: .8px
-	// min-width: 320px
+	min-width: 320px
 	position: relative
 	line-height: 1.6
 	font-family: "HomizioNova", sans-serif
@@ -27,6 +25,7 @@ header
 	position: relative
 .header-content
 	+container(1200px)
+	overflow: hidden
 	position: relative
 	min-height: 1000px
 .header-element
@@ -37,6 +36,8 @@ header
 	display: table-cell
 	position: relative
 	transition: .3s
+	span
+		white-space: nowrap
 
 
 
@@ -277,6 +278,7 @@ header
 
 .el_5
 	margin: 0 3px 0 38px
+	clear: left
 
 .arrow
 	margin: 0 auto
@@ -465,5 +467,59 @@ section
 		text-decoration: none !important
 		color: #fff
 	
++breakpoint(max-width 1055px)
+		.header-element.header-element_margin.header-element_line-btm.bg_elem
+			display: none
+		.header-element.header-element_margin.header-element_fl-right.bg_elem
+			display: none
+		.header-element.header-element_fl-right.header-element_btm-vertical.bg_elem
+			display: none
+		.header-element.header-element_last.header-element_line-right
+			display: none
+		.header-element.header-element_about-us.header-element_line-left.header-element_hover
+			margin: 0px
+		.header-bottom-line
+			right: -9.8%
+			top: 49.3%
 
+.sf-menu
+	width: 100% 
+	li
+		width: 100%
+		text-align: center
+		background: rgba(255,255,255, .3) !important
+		&:hover
+			background: rgba($accent, .5) !important
+		a
+			color: #fff
+	
+.mobile-menu
+	display: none
++breakpoint(max-width 850px)
+	.header-top-line
+		left: -19%
+	
++breakpoint(max-width 711px)
+	.header-top-line
+		display: none
+	.sf-menu
+		display: block
+	.header-content,header
+		min-height: 0
+	.header-content
+		padding-bottom: 10%
+	.mobile-menu
+		display: block
+
+
++breakpoint(min-width 711px)
+	.mobile-mnu
+		display: none
+
+.sf-menu .logo-menu
+	background: transparent !important
+	&:hover
+		background: transparent !important
+	img
+		max-width: 100%
 

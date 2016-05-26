@@ -1,6 +1,6 @@
 $(function() {
   
- 
+
 	$(document).ready(function(){
 		
 		$("#feature-crousel").owlCarousel({
@@ -44,14 +44,16 @@ $(function() {
 
 	});
 	
-
-
+  	
 	$(".toggle-mnu").click(function() {
 		$(this).toggleClass("on");
-		$(".main-mnu").slideToggle();
+		 $(".sf-menu").slideToggle();
+		$(".arrow").slideToggle();
 		return false;
 	});
 
+
+  $("a[href*='#']").mPageScroll2id();
 
 	$(".arrow").click(function(){
 		$("html,body").animate({
@@ -80,6 +82,18 @@ $(function() {
 	$(".our-works").click(function(){
 		$("html,body").animate({
 			scrollTop : $(".project").offset().top
+		}, 1000);
+	});
+
+	$(".up").click(function(){
+		$("html,body").animate({
+			scrollTop : $("header").offset().top
+		}, 1000);
+	});
+
+	$(".in-touch").click(function(){
+		$("html,body").animate({
+			scrollTop : $(".touch").offset().top
 		}, 1000);
 	});
 
@@ -143,6 +157,11 @@ $(function() {
         $("#slider_5").roundSlider("setValue", 70, 1);
     })
     .addTo(controller);
+
+    var imgscene = new ScrollMagic.Scene({
+			triggerElement: ".work"
+		}).setClassToggle(".up", "active") 
+			.addTo(controller);
 
     $(".team-item,.work__item,.service-item").each( function(index){
     	$(this).css('animation-delay', index/10 +'s');
