@@ -176,7 +176,7 @@
 
 	$('.popup-link').magnificPopup({type:'image'});
 
-  $(".preloader").fadeOut();
+  $(".preloader").hide();
 	$(window).load(function() {
 
 		$(".preloader").fadeOut();

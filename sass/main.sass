@@ -879,20 +879,19 @@ $offers_layout: layout(12 .3 fluid float split);
 	color: #fff
 	transform: rotate(45deg)
 	opacity: .5
-	transition: opacity .3s
+	transition: .3s
 	cursor: pointer
 	position: fixed
 	z-index: 100
 	bottom: 20%
-	right: 6%
-	display: none
+	right: -100px
 	& .fa
 		transform: rotate(-45deg) translate(4px,13px)
 	&:hover
 		opacity: 1
 
 .up.active
-	display: block
+	right: 6%
 
 +breakpoint(max-width 1280px)	
 	.feature-crousel
